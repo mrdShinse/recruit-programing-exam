@@ -10,7 +10,7 @@ public class History extends ArrayList<AnswerLog> {
 
     @Override
     public boolean add(AnswerLog logUnit) {
-        if (!this.isEmpty()) {
+        if (this.size() > 1) {
             System.out.print(",");
         }
         System.out.print(String.format(
