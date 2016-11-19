@@ -1,5 +1,6 @@
-package mrdshinse.recruit.programing.test;
+package mrdshinse.recruit.programing.exam;
 
+import mrdshinse.recruit.programing.exam.IndianPorkerManager;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import static org.hamcrest.CoreMatchers.is;

@@ -1,5 +1,6 @@
-package mrdshinse.recruit.programing.test;
+package mrdshinse.recruit.programing.exam;
 
+import mrdshinse.recruit.programing.exam.CardFactory;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

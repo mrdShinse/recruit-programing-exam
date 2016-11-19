@@ -1,4 +1,4 @@
-package mrdshinse.recruit.programing.test;
+package mrdshinse.recruit.programing.exam;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,7 +29,7 @@ public class DefaultStrategy implements Strategy {
         Card maxNumInField = cardsOnField.get(cardsOnField.size() - 1);
         List<Card> numsExpected = new ArrayList<>();
         for (int num = 1; num < config.getNUM_OF_CARDS() - 1; num++) {
-            numsExpected.add(new Card(num));
+            numsExpected.add(CardFactory.create(num));
         }
         numsExpected.removeAll(cardsOnField);
         Collections.sort(numsExpected, cardComparator);

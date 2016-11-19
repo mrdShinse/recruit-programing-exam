@@ -1,4 +1,4 @@
-package mrdshinse.recruit.programing.test;
+package mrdshinse.recruit.programing.exam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class PlayerFactory {
         String[] playerInfo = arg.split("=");
         return new Player(
                 playerInfo[0],
-                new Card(Integer.parseInt(playerInfo[1])));
+                CardFactory.create(Integer.parseInt(playerInfo[1])));
     }
 
     public static List<Player> createPlayers(@NonNull String[] args) {

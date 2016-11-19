@@ -1,4 +1,4 @@
-package mrdshinse.recruit.programing.test;
+package mrdshinse.recruit.programing.exam;
 
 import java.util.List;
 import lombok.NonNull;
