@@ -1,15 +1,15 @@
 package mrdshinse.recruit.programing.test;
 
 import lombok.NonNull;
-import lombok.Value;
 
 /**
  *
  * @author mrdShinse
  */
-@Value
-public class Card {
+public class CardFactory {
 
-    @NonNull
-    private final Integer number;
+    public static Card create(@NonNull Integer num) {
+        return new Card(num);
+    }
+
 }

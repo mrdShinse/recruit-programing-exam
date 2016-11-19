@@ -1,6 +1,7 @@
 package mrdshinse.recruit.programing.test;
 
 import java.util.List;
+import lombok.NonNull;
 
 /**
  *
@@ -12,7 +13,7 @@ public class IndianPorker {
     private final List<Player> players;
     private final History history;
 
-    public IndianPorker(String[] args) {
+    public IndianPorker(@NonNull String[] args) {
         this.config = new IndianPorkerConfig();
         this.players = PlayerFactory.createPlayers(args);
         this.history = new History();

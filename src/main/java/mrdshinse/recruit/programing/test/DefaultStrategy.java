@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import lombok.NonNull;
 
 /**
  *
@@ -17,7 +18,11 @@ public class DefaultStrategy implements Strategy {
     };
 
     @Override
-    public Answer guess(List<Card> cardsOnField, IndianPorkerConfig config, History log) {
+    public Answer guess(
+            @NonNull List<Card> cardsOnField,
+            @NonNull IndianPorkerConfig config,
+            @NonNull History log
+    ) {
         Integer numOfCards = config.getNUM_OF_CARDS();
         Collections.sort(cardsOnField, cardComparator);
         Card minNumInField = cardsOnField.get(0);

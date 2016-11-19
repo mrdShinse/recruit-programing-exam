@@ -3,6 +3,7 @@ package mrdshinse.recruit.programing.test;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
+import lombok.NonNull;
 
 /**
  *
@@ -18,20 +19,14 @@ public class Player {
     private final List<Card> cardsOnField;
     private Strategy strategy;
 
-    public Player(String name, Card card) {
-        if (name == null || card == null) {
-            throw new IllegalArgumentException(String.format(
-                    "name:%s card:%s",
-                    name,
-                    card));
-        }
+    public Player(@NonNull String name, @NonNull Card card) {
         this.name = name;
         this.card = card;
         this.cardsOnField = new ArrayList<>();
         this.strategy = new DefaultStrategy();
     }
 
-    public Answer guess(IndianPorkerConfig config, History log) {
+    public Answer guess(@NonNull IndianPorkerConfig config, @NonNull History log) {
         return strategy.guess(this.cardsOnField, config, log);
     }
 }

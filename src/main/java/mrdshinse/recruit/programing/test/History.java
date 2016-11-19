@@ -1,6 +1,7 @@
 package mrdshinse.recruit.programing.test;
 
 import java.util.ArrayList;
+import lombok.NonNull;
 
 /**
  *
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 public class History extends ArrayList<AnswerLog> {
 
     @Override
-    public boolean add(AnswerLog logUnit) {
+    public boolean add(@NonNull AnswerLog logUnit) {
         if (this.size() > 1) {
             System.out.print(",");
         }

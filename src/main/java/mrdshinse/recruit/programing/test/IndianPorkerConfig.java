@@ -1,6 +1,7 @@
 package mrdshinse.recruit.programing.test;
 
 import lombok.Getter;
+import lombok.NonNull;
 
 /**
  *
@@ -16,10 +17,7 @@ public class IndianPorkerConfig {
         this.NUM_OF_CARDS = this.DEFAULT_NUM_OF_CARDS;
     }
 
-    public IndianPorkerConfig(Integer numOfCards) {
-        if (numOfCards == null) {
-            throw new IllegalArgumentException(String.format("numOfCards:%d", numOfCards));
-        }
+    public IndianPorkerConfig(@NonNull Integer numOfCards) {
         this.NUM_OF_CARDS = numOfCards;
     }
 

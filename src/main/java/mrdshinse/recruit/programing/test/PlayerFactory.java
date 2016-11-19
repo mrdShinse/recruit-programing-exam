@@ -2,6 +2,7 @@ package mrdshinse.recruit.programing.test;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.NonNull;
 
 /**
  *
@@ -9,18 +10,14 @@ import java.util.List;
  */
 public class PlayerFactory {
 
-    public static Player create(String arg) {
-        if (arg == null) {
-            throw new IllegalArgumentException(String.format("arg:%s", arg));
-        }
-
+    public static Player create(@NonNull String arg) {
         String[] playerInfo = arg.split("=");
         return new Player(
                 playerInfo[0],
                 new Card(Integer.parseInt(playerInfo[1])));
     }
 
-    public static List<Player> createPlayers(String[] args) {
+    public static List<Player> createPlayers(@NonNull String[] args) {
         List<Player> tmpPlayers = new ArrayList<>();
         //カードを配る
         for (String arg : args) {
