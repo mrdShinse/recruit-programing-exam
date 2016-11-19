@@ -15,9 +15,4 @@ public class IndianPorkerManager {
     public void startGame() {
         PORKER.play();
     }
-
-    //TODO delete this method.
-    public static void main(String[] args) {
-        new IndianPorkerManager(new String[]{"A=1", "B=4", "C=5"}).startGame();
-    }
 }

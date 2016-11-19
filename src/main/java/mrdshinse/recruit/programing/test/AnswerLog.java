@@ -1,24 +1,18 @@
 package mrdshinse.recruit.programing.test;
 
-import lombok.Getter;
+import lombok.NonNull;
+import lombok.Value;
 
 /**
  *
  * @author mrdShinse
  */
+@Value
 public class AnswerLog {
 
-    @Getter
+    @NonNull
     private final String name;
-    @Getter
+    @NonNull
     private final Answer answer;
-
-    public AnswerLog(String name, Answer answer) {
-        if (name == null || answer == null) {
-            throw new IllegalArgumentException(String.format("name:%s answer:%s", name, answer));
-        }
-        this.name = name;
-        this.answer = answer;
-    }
 
 }
