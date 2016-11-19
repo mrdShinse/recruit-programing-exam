@@ -17,7 +17,7 @@ public class DefaultStrategy implements Strategy {
     };
 
     @Override
-    public Answer guess(List<Card> cardsOnField, IndianPorkerConfig config, List<AnswerLog> log) {
+    public Answer guess(List<Card> cardsOnField, IndianPorkerConfig config, History log) {
         Integer numOfCards = config.getNUM_OF_CARDS();
         Collections.sort(cardsOnField, cardComparator);
         Card minNumInField = cardsOnField.get(0);

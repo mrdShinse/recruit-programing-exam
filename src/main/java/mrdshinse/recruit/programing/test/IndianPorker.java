@@ -27,7 +27,7 @@ public class IndianPorker {
             }
             Player player = players.get(turn++ % players.size());
             Answer answer = player.guess(config, history);
-            history.add(new AnswerLog(player.getName(), answer));
+            history.add(new AnswerLog(player, answer));
 
             //全員？で無限ループを防ぐために暫定対応で100ターン経ったら終了とする。
             if (!Answer.CANT_ANSWER.equals(answer) || turn > 100) {
@@ -35,5 +35,4 @@ public class IndianPorker {
             }
         }
     }
-
 }

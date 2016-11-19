@@ -31,7 +31,7 @@ public class Player {
         this.strategy = new DefaultStrategy();
     }
 
-    public Answer guess(IndianPorkerConfig config, List<AnswerLog> log) {
+    public Answer guess(IndianPorkerConfig config, History log) {
         return strategy.guess(this.cardsOnField, config, log);
     }
 }

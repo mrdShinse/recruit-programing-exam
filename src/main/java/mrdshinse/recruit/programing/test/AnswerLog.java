@@ -11,7 +11,7 @@ import lombok.Value;
 public class AnswerLog {
 
     @NonNull
-    private final String name;
+    private final Player player;
     @NonNull
     private final Answer answer;
 
