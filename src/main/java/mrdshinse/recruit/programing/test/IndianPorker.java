@@ -50,7 +50,7 @@ public class IndianPorker {
             List<Player> others = new ArrayList<>(tmpPlayers);
             others.remove(player);
             for (Player other : others) {
-                player.getCardsOnField().add(other.getDigitsOfCard());
+                player.getCardsOnField().add(other.getCard());
             }
         }
 
@@ -61,7 +61,7 @@ public class IndianPorker {
         String[] playerInfo = arg.split("=");
         return new Player(
                 playerInfo[0],
-                Integer.parseInt(playerInfo[1]));
+                new Card(Integer.parseInt(playerInfo[1])));
     }
 
 }
